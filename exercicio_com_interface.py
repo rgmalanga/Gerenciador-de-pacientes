@@ -1,10 +1,5 @@
 import tkinter as tk
 import tkinter.messagebox as messagebox
-import time 
-import numpy as np
-import csv
-import pandas as pd
-import ast
 import json
 
 
@@ -108,22 +103,22 @@ class pacienteApp:
         self.Entry_status = tk.Entry(master)
         self.Entry_status.grid(row=6, column=1)
 
-        self.register_button = tk.Button(master, text="Cadastrar", command=self.register)
+        self.register_button = tk.Button(master, text="Cadastrar", command=self.cadastrar)
         self.register_button.grid(row=7, column=0)
 
-        self.search_button = tk.Button(master, text="Consultar pelo nome", command=self.search)
+        self.search_button = tk.Button(master, text="Consultar pelo nome", command=self.busca)
         self.search_button.grid(row=7, column=1)
 
-        self.update_button = tk.Button(master, text="Editar informações do paciente", command=self.update)
+        self.update_button = tk.Button(master, text="Editar informações do paciente", command=self.atualizar)
         self.update_button.grid(row=7, column=2)
 
-        self.view_button = tk.Button(master, text ='Visualizar Pacientes cadastrados', command = self.view)
+        self.view_button = tk.Button(master, text ='Visualizar Pacientes cadastrados', command = self.visualizar)
         self.view_button.grid(row=7, column = 3)
 
-        self.clear_button = tk.Button(master, text ='Limpar campos', command = self.clear)
+        self.clear_button = tk.Button(master, text ='Limpar campos', command = self.limpar)
         self.clear_button.grid(row=1, column = 3)
 
-    def register(self):
+    def cadastrar(self):
         name = self.Entry_name.get()
         Sobrenome = self.Entry_Sobrenome.get()
         data_nascimento = self.Entry_data_nascimento.get()
@@ -140,7 +135,7 @@ class pacienteApp:
         self.Entry_endereco.delete(0, tk.END)
         self.Entry_status.delete(0, tk.END)
 
-    def search(self):
+    def busca(self):
         nome = self.Entry_name.get()
         pacientes = pesquisa_paciente_pelo_nome(nome)
         if pacientes:
@@ -152,7 +147,7 @@ class pacienteApp:
         else:
             return None
 
-    def update(self):
+    def atualizar(self):
         name = self.Entry_name.get()
         Sobrenome = self.Entry_Sobrenome.get()
         data_nascimento = self.Entry_data_nascimento.get()
@@ -163,7 +158,7 @@ class pacienteApp:
         paciente = pesquisa_paciente_pelo_cpf(CPF)
         atualizar_paciente(paciente, name, Sobrenome, data_nascimento, CPF, Sexo, endereco, status)
 
-    def view(self):
+    def visualizar(self):
         janela_nova = tk.Toplevel()
         janela_nova.title("Pacientes Cadastrados")
 
@@ -172,7 +167,7 @@ class pacienteApp:
             label_dados = tk.Label(janela_nova, text = BD[i])
             label_dados.grid(row = i, column = 0)
 
-    def clear(self):
+    def limpar(self):
         self.Entry_name.delete(0, tk.END)
         self.Entry_Sobrenome.delete(0, tk.END)
         self.Entry_data_nascimento.delete(0, tk.END)
