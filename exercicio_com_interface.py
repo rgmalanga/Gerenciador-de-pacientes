@@ -62,7 +62,6 @@ def atualizar_paciente(paciente_cpf, nome=None, Sobrenome = None, data_nasciment
     print(f"Dados de {paciente['Nome'], paciente['Sobrenome']} atualizados com sucesso.")
     tk.messagebox.showwarning("Aviso", f"Dados de {paciente['Nome'], paciente['Sobrenome']} atualizados com sucesso.")
 
-
 class pacienteApp:
     def __init__(self, master):
         self.master = master
