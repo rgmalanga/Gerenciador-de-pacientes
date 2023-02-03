@@ -1,10 +1,13 @@
+# Importando as Bibliotecas Necessárias
 import tkinter as tk
 import tkinter.messagebox as messagebox
 import json
 
-
-with open('dados.json', 'r') as arquivo_json:
+# Carregando o arquivo utilizado como Banco de Dados
+with open('Dados.json', 'r') as arquivo_json:
     BD = json.load(arquivo_json)
+
+# Implementação das funções necessárias
 
 def registrar_paciente(Nome, Sobrenome, Data_de_Nascimento, CPF, Sexo, endereco=None, Status='Ativo'):
     if not all([Nome, Sobrenome, Data_de_Nascimento, CPF, Sexo, Status]):
@@ -62,8 +65,9 @@ def atualizar_paciente(paciente_cpf, nome=None, Sobrenome = None, data_nasciment
     print(f"Dados de {paciente['Nome'], paciente['Sobrenome']} atualizados com sucesso.")
     tk.messagebox.showwarning("Aviso", f"Dados de {paciente['Nome'], paciente['Sobrenome']} atualizados com sucesso.")
 
+# Implementação da GUI
 
-class pacienteApp:
+class GerenciadorDepacientes:
     def __init__(self, master):
         self.master = master
         master.title("Sistema de pacientes")
@@ -177,8 +181,10 @@ class pacienteApp:
         self.Entry_status.delete(0, tk.END)
 
 root = tk.Tk()
-app = pacienteApp(root)
+app = GerenciadorDepacientes(root)
 root.mainloop()
 
-with open('dados.json', 'w') as arquivo_json:
+# Salvar os novos dados no Banco de dados
+
+with open('Dados.json', 'w') as arquivo_json:
     json.dump(BD, arquivo_json)
