@@ -4,7 +4,7 @@ import tkinter.messagebox as messagebox
 import json
 
 # Carregando o arquivo utilizado como Banco de Dados
-with open('Dados.json', 'r') as arquivo_json:
+with open('dados.json', 'r') as arquivo_json:
     BD = json.load(arquivo_json)
 
 # Implementação das funções necessárias
@@ -186,5 +186,5 @@ root.mainloop()
 
 # Salvar os novos dados no Banco de dados
 
-with open('Dados.json', 'w') as arquivo_json:
+with open('dados.json', 'w') as arquivo_json:
     json.dump(BD, arquivo_json)
