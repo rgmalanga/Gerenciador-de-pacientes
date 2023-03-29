@@ -82,7 +82,7 @@ class GerenciadorDepacientes:
         self.Entry_Sobrenome = tk.Entry(master)
         self.Entry_Sobrenome.grid(row=1, column=1)
 
-        self.label_data_nascimento = tk.Label(master, text="Data de nascimento (dd/mm/aaaa)")
+        self.label_data_nascimento = tk.Label(master, text="Data de Nascimento (dd/mm/aaaa)")
         self.label_data_nascimento.grid(row=2, column=0)
         self.Entry_data_nascimento = tk.Entry(master)
         self.Entry_data_nascimento.grid(row=2, column=1)
