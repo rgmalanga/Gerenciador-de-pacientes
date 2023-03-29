@@ -97,7 +97,7 @@ class GerenciadorDepacientes:
         self.Entry_Sexo = tk.Entry(master)
         self.Entry_Sexo.grid(row=4, column=1)
 
-        self.label_endereco = tk.Label(master, text="Endereço (opcional)")
+        self.label_endereco = tk.Label(master, text="Endereço (Opcional)")
         self.label_endereco.grid(row=5, column=0)
         self.Entry_endereco = tk.Entry(master)
         self.Entry_endereco.grid(row=5, column=1)
