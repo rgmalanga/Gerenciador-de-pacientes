@@ -1,7 +1,4 @@
 ﻿# Solução Web para Gerenciar pacientes
- 
- [Interface Primária](interface0.png)
- 
 
 # GerenciadorDePacientes
 
@@ -16,6 +13,17 @@
 #### Filtro de pesquisa de paciente por nome.
 
 #### Atualização dos dados de um paciente já registrado.
+
+ # Interfaces:
+ 
+ ## Interface Primária
+ <img src="interface0.png" alt="Interface Primária">
+ 
+ ## Interfaces secundárias (Avisos)
+<img src="interface2.png">
+<img src="interface3.png">
+<img src="interface4png">
+<img src="interface1.png">
 
 # Utilização
 
