@@ -87,7 +87,7 @@ class GerenciadorDepacientes:
         self.Entry_data_nascimento = tk.Entry(master)
         self.Entry_data_nascimento.grid(row=2, column=1)
 
-        self.label_CPF = tk.Label(master, text="CPF (apenas números)")
+        self.label_CPF = tk.Label(master, text="CPF (Apenas números)")
         self.label_CPF.grid(row=3, column=0)
         self.Entry_CPF = tk.Entry(master)
         self.Entry_CPF.grid(row=3, column=1)
