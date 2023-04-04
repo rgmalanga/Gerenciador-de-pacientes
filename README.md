@@ -53,7 +53,3 @@
 #### Python 3.x
 #### Biblioteca tkinter
 #### Biblioteca json.
-
-# Observações
-
-#### Este é um sistema bem básico, destinado apenas à resolver o exercicio solicitado.
